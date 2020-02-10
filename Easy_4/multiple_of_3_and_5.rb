@@ -9,7 +9,7 @@ def multisum(number)
 
   array_three = multisum_three(number)
   array_five = multisum_five(number)
-
+  array_three.concat(array_five).uniq!.sort!.sum
 
 end
 
@@ -17,7 +17,7 @@ end
 
 def multisum_three(number)
 
-array_multisum_three = [1]
+array_multisum_three = []
 addition_number = 0
 
   while addition_number < number
@@ -38,7 +38,7 @@ end
 
 def multisum_five(number)
 
-array_multisum_five = [1]
+array_multisum_five = []
 addition_number = 0
 
   while addition_number < number
@@ -55,10 +55,3 @@ addition_number = 0
 
   array_multisum_five
 end
-
-multisum(15)
-
-
-
-  array_five = multisum_five(number)
-    array_three.concat(array_five)
