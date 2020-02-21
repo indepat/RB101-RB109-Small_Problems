@@ -9,8 +9,7 @@ def multisum(number)
 
   array_three = multisum_three(number)
   array_five = multisum_five(number)
-  array_three.concat(array_five).uniq!.sort!.sum
-
+  array_three.concat(array_five).uniq!.sum
 end
 
 
@@ -55,3 +54,5 @@ addition_number = 0
 
   array_multisum_five
 end
+
+multisum(1000)
