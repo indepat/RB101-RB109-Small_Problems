@@ -25,8 +25,11 @@ end
 number_array.map! do |char|
   NUMERICAL_CONVERT_STRING[char]
   end
-  number_array
+  number_array.join
 end
 
-
-
+=begin
+integer_to_string(4321) => '4321'
+integer_to_string(0)    => '0'
+integer_to_string(5000) => '5000'
+=end

@@ -12,8 +12,9 @@ def string_to_integer(string)
   digits = string.chars.map { |char| STRING_CONVERT_NUMERICAL[char]  }
   value = 0
   digits.each { |digit| value = 10* value + digit}
-  
+  value  
 end
+
 
 
 

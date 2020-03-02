@@ -17,3 +17,30 @@ century(1052) == '11th'
 century(1127) == '12th'
 century(11201) == '113th'
 ```
+
+```ruby
+def century_year(year)
+
+	century_year = year.div(100) + 1
+	century_year -= 1 if year % 100 == 0
+	century_year.to_s + century_suffix(century_year)
+
+end
+
+def century_suffix(century_year)
+
+	return "th" if century_year.to_s.include?('11') || 
+				   century_year.to_s.include?('12') ||
+				   century_year.to_s.include?('13')
+	last_digit = century_year % 10
+
+	case last_digit	
+	when 1 then "st"
+	when 2 then "nd"
+	when 3 then "rd"
+	else "th"
+	end
+
+end
+```
+

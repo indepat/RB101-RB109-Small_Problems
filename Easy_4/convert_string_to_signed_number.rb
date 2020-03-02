@@ -29,6 +29,8 @@ def string_to_signed_number(string)
   end
 end
 
-puts string_to_signed_number('-570')
-puts string_to_signed_number('+570')
-puts string_to_signed_number('570')
+=begin
+string_to_signed_number('-570') #=> -570
+string_to_signed_number('+570') #=>  570
+string_to_signed_number('570')  #=>  570
+=end
