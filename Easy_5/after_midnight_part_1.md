@@ -33,3 +33,11 @@ def time_of_day(delta_minutes)
   format('%02d:%02d', hours, minutes)
 end
 ```
+
+<ins>**Explanation**</ins>:
+
+When performing `time_of_play` method, the number is passed through the modulo method where the `delta_minutes` is reduced to `1440` since that's the maximum the format can take. 
+
+After that, the `delta_,minutes` is passed through the `divmod` method to extract the `hours` and `minutes` by being divided by `MINUTES_PER_HOURS`. 
+
+The format being presented is `%02d` since hour or minute have to be presented in two digit format.  
