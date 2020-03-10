@@ -36,8 +36,8 @@ end
 
 <ins>**Explanation**</ins>:
 
-When performing `time_of_play` method, the number is passed through the modulo method where the `delta_minutes` is reduced to `1440` since that's the maximum the format can take. 
+When performing `time_of_play` method, the number is passed through the modulo method where the `delta_minutes` is reduced to `1440` since that's the maximum the format can take. This will ensure that passed more than `1440` the number is back to zero. 
 
-After that, the `delta_,minutes` is passed through the `divmod` method to extract the `hours` and `minutes` by being divided by `MINUTES_PER_HOURS`. 
+After that, the `delta_minutes` is passed through the `divmod` method to extract the `hours` and `minutes` by being divided by `MINUTES_PER_HOURS`. 
 
-The format being presented is `%02d` since hour or minute have to be presented in two digit format.  
+The format being presented is `%02d` since hour or minute have to be presented in two digits format.  
